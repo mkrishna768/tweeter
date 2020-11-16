@@ -1,11 +1,30 @@
 .new-tweet {
   display: flex;
   flex-direction: column;
+  padding: 1em;
+  width: 100%;
 }
 
 .new-tweet form {
   display: flex;
   flex-direction: column;
+}
+
+.new-tweet button {
+  font-family: 'Bungee', cursive;
+  color: #ffffff;
+  background-color: #4956a1;
+  border: none;
+}
+
+.new-tweet div {
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;
 }
 
 #tweet-text {
