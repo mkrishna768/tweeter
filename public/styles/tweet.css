@@ -1,0 +1,51 @@
+#tweet-container {
+  display: flex;
+  margin: 1em;
+  flex-direction: column;
+}
+
+article.tweet:hover {
+  text-shadow: 1px 1px black;
+  box-shadow: 5px 5px 5px gray;
+}
+
+article.tweet {
+  width: 100%;
+  border: solid;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+article.tweet header {
+  display: flex;
+  font-size: 1em;
+}
+
+article.tweet header img {
+  height: 2.5em;
+}
+
+.tweet-user {
+  opacity: 0;
+}
+
+article.tweet:hover .tweet-user {
+  opacity: 0.5;
+}
+
+article.tweet header section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article.tweet p {
+  margin-left: 1em;
+}
+
+article.tweet footer {
+  display: flex;
+  border-top: solid;
+  justify-content: space-between;
+}

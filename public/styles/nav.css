@@ -3,6 +3,9 @@ nav {
   height: 120px;
   background-color: #4956a1;
   padding: 1.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 nav span {
