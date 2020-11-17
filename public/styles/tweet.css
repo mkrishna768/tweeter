@@ -1,4 +1,4 @@
-#tweet-container {
+#tweets-container {
   display: flex;
   margin: 1em;
   flex-direction: column;
@@ -22,7 +22,8 @@ article.tweet header {
 }
 
 article.tweet header img {
-  height: 2.5em;
+  height: 2em;
+  margin-right: 0.5em;
 }
 
 .tweet-user {
@@ -45,7 +46,9 @@ article.tweet p {
 }
 
 article.tweet footer {
+  font-size: 16px;
   display: flex;
   border-top: solid;
   justify-content: space-between;
+  padding: 0.5em;
 }
