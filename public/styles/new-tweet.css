@@ -33,11 +33,11 @@
   display: none;
   margin-bottom: 1em;
 }
-/*
-#new-error:empty {
+
+#new-wrapper {
   display: none;
 }
-*/
+
 #new-text {
   background: none;
   border: none;

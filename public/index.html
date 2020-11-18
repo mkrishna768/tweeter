@@ -30,6 +30,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <section id="nav-new">Write a new tweet</section>
     </nav>
     <header class ="mainhead">
       <div>
@@ -43,17 +44,19 @@
   
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <div id="new-error"></div>
-        <form id="new-form" method="POST" action="/tweets/">
-          <label for="new-text">What are you humming about?</label>
-          <textarea name="text" id="new-text"></textarea>
-          <footer>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="new-text">140</output>
-          </footer>
-        </form>
-      </section>
+      <div id="new-wrapper">
+        <section class="new-tweet">
+          <div id="new-error"></div>
+          <form id="new-form" method="POST" action="/tweets/">
+            <label for="new-text">What are you humming about?</label>
+            <textarea name="text" id="new-text"></textarea>
+            <footer>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="new-text">140</output>
+            </footer>
+          </form>
+        </section>
+      </div>
       <section id="tweets-container"></section>
     </main>
   </body>

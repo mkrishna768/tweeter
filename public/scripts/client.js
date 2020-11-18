@@ -73,6 +73,12 @@ $(document).ready(function() {
   };
 
   loadTweets();
+
+  $('#nav-new').click((event) => {
+    $('#new-wrapper').slideToggle();
+    $('#new-text').focus();
+  });
+
   $('#new-form').submit(function(event) {
     event.preventDefault();
     if (!($("#new-text").val().length < 140)) {
