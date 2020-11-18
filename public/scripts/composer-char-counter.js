@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#tweet-text").on("input", function(event) {
+  $("#new-text").on("input", function(event) {
     const counter = this.nextElementSibling.lastElementChild;
     counter.innerHTML = 140 - $(this).val().length;
     if (counter.innerHTML >= 0) {

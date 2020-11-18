@@ -63,5 +63,12 @@ const renderTweets = function(tweets) {
 
 //test code
 $(document).ready(function() {
-  renderTweets(data);
+  $('#new-form').submit(function(event) {
+    event.preventDefault();
+    if ($("#new-text").val().length < 140 && $("#new-text").val().length > 0) {
+      $.post("/tweets/", $(this).serialize(), () => {
+        console.log("posted");
+      })
+    }
+  });
 });
