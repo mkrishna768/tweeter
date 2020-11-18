@@ -17,7 +17,7 @@
   border: none;
 }
 
-.new-tweet div {
+.new-tweet footer {
   padding-top: 1em;
   display: flex;
   justify-content: space-between;
@@ -27,6 +27,17 @@
   font-family: 'Bungee', cursive;
 }
 
+#new-error {
+  border: solid red;
+  color: red;
+  display: none;
+  margin-bottom: 1em;
+}
+/*
+#new-error:empty {
+  display: none;
+}
+*/
 #new-text {
   background: none;
   border: none;

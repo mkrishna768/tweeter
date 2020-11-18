@@ -44,14 +44,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <div id="new-error"></div>
         <form id="new-form" method="POST" action="/tweets/">
           <label for="new-text">What are you humming about?</label>
           <textarea name="text" id="new-text"></textarea>
-          <div>
+          <footer>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="new-text">140</output>
-          </div>
+          </footer>
         </form>
       </section>
       <section id="tweets-container"></section>

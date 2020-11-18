@@ -76,12 +76,18 @@ $(document).ready(function() {
   $('#new-form').submit(function(event) {
     event.preventDefault();
     if (!($("#new-text").val().length < 140)) {
-      alert("Tweet too long");
+      $("#new-error").text('⚠ Tweets cannot be longer than 140 characters ⚠');
+      $("#new-error").slideDown();
     } else if (!$("#new-text").val().length > 0) {
-      alert("Please type something to tweet");
+      $("#new-error").text('⚠ Tweets cannot be empty ⚠');
+      $("#new-error").slideDown();
+      
     } else {
       $.post("/tweets/", $(this).serialize(), () => {
         $("#new-text").val('');
+        $("#new-error").slideUp();
+        $("#new-error").empty();
+        $(".counter").text('140');
         $.get("/tweets", (data) => {
           $('#tweets-container').append(createTweetElement(data[data.length - 1]));
         });
