@@ -1,7 +1,7 @@
 #tweets-container {
   display: flex;
   margin: 1em;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 
 article.tweet:hover {

@@ -59,15 +59,15 @@ const renderTweets = function(tweets) {
     const $tweet = createTweetElement(tweet);
     $('#tweets-container').append($tweet);
   }
-}
+};
 
 $(document).ready(function() {
   const loadTweets = function() {
     $.get("/tweets", (data) => {
-      console.log(data);
       renderTweets(data);
     });
-  }
+  };
+
   loadTweets();
   $('#new-form').submit(function(event) {
     event.preventDefault();
@@ -77,8 +77,10 @@ $(document).ready(function() {
       alert("Please type something to tweet");
     } else {
       $.post("/tweets/", $(this).serialize(), () => {
-        console.log("posted");
         $("#new-text").val('');
+        $.get("/tweets", (data) => {
+          $('#tweets-container').append(createTweetElement(data[data.length - 1]));
+        });
       });
     }
   });
