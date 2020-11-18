@@ -38,7 +38,7 @@ const createTweetElement = function(tweetData) {
   const timeDiff = present.getTime() - tweetDate.getTime(); 
   const days = Math.floor(timeDiff / (1000 * 3600 * 24));
   //returning tweet
-  return $(`<article class="tweet">
+  let $tweet = $(`<article class="tweet">
               <header>
                 <img src="${tweetData.user.avatars}">
                 <section>
@@ -46,12 +46,16 @@ const createTweetElement = function(tweetData) {
                   <span class="tweet-user">${tweetData.user.handle}</span>
                 </section>
               </header>
-              <p>${tweetData.content.text}</p>
+              <p></p>
               <footer>
                 <span>${days} days ago</span>
                 <span>buttons</span>
               </footer>
-            </article>`);
+            </article>`
+  );
+  //setting tweet text safely to prevent XSS
+  $($tweet.children("p")[0]).text(tweetData.content.text);
+  return $tweet;
 };
 
 const renderTweets = function(tweets) {
