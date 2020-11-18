@@ -6,4 +6,14 @@ header.mainhead {
   flex-direction: column;
   background-color: #77007d;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  padding-top: 1em;
 }
+
+/*Desktop layout*/
+
+@media only screen and (min-width: 1024px) {
+  header.mainhead {
+    margin: 2em;
+    width: 20em;
+  }
+ }

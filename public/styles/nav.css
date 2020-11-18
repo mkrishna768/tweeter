@@ -17,3 +17,10 @@ nav span {
 #nav-new {
   cursor: pointer;
 }
+
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: #77007d;
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  }
+ }
