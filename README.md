@@ -5,9 +5,9 @@ Tweeter is a simple, single-page AJAX based Twitter clone using jQuery, HTML5 an
 
 ## Final Product
 
-![""](#)
-![""](#)
-
+!["Desktop View"](https://github.com/mkrishna768/tweeter/blob/master/docs/desktop-tweets.png)
+!["Mobile View"](https://github.com/mkrishna768/tweeter/blob/master/docs/mobile-view.png)
+!["New tweet"](https://github.com/mkrishna768/tweeter/blob/master/docs/new-tweet.png)
 
 ## Getting Started
 
