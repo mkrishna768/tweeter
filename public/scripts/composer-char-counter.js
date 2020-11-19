@@ -1,3 +1,4 @@
+//functinallity for character counter text
 $(document).ready(function() {
   $("#new-text").on("input", function(event) {
     const counter = this.nextElementSibling.lastElementChild;
